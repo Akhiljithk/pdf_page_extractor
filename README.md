@@ -1,6 +1,6 @@
 # PDF Page Extractor
 
-This project allows you to upload a PDF and extract specific pages using a client-server architecture.
+This project allows you to upload a PDF and extract specific pages.
 
 ### Project Structure
 
@@ -20,7 +20,7 @@ This project allows you to upload a PDF and extract specific pages using a clien
 2. Install the required packages:
    ```bash
    npm install
-3. Start the client-side application::
+3. Start the client-side application:
    ```bash
    npm start
 
