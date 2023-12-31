@@ -16,25 +16,25 @@ This project allows you to upload a PDF and extract specific pages.
 ### Client Setup
 1. Open a terminal and navigate to the client folder:
    ```bash
-   cd client
+   $cd client
 2. Install the required packages:
    ```bash
-   npm install
+   $npm install
 3. Start the client-side application:
    ```bash
-   npm start
+   $npm start
 
 ### Server Setup
 
 1. Open a terminal and navigate to the client folder:
    ```bash
-   cd server
+   $cd server
 2. Install the necessary packages:
    ```bash
-   npm install
+   $npm install
 3. tart the server:
    ```bash
-   nodemon start
+   $nodemon start
 3. Once both the client and server are running, open your browser and visit :
    ```bash
    http://localhost:5000
