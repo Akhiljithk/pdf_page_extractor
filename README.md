@@ -44,7 +44,7 @@ Ensure both client and server are running simultaneously to utilize the applicat
 
 ### Key Features
 
-- **Decent User Interface:** Enjoy a user-friendly interface designed to enhance user interaction and provide a smooth user experience (UX). Interactive elements provide clear responses, improving the overall user experience.
+- **Decent User Interface:** Enjoy the user-friendly interface. Interactive elements provide clear responses, improving the overall user experience and enhance smooth user experience (UX)
   
 - **Super Responsive:** Experience comfort while using the application on any screen size. The layout adapts seamlessly to different devices.
 
