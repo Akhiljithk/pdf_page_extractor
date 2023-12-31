@@ -38,8 +38,20 @@ This project allows you to upload a PDF and extract specific pages.
 3. Once both the client and server are running, open your browser and visit :
    ```bash
    http://localhost:5000
+
 ### Note: 
 Ensure both client and server are running simultaneously to utilize the application functionalities effectively.
+
+### Key Features
+
+- **Decent User Interface:** Enjoy a user-friendly interface designed to enhance user interaction and provide a smooth user experience (UX).
+
+- **Super Responsive:** Experience comfort while using the application on any screen size. The layout adapts seamlessly to different devices.
+
+- **Progress Bar for Server Response:** In case the server takes longer to respond, a progress bar will indicate ongoing processes, ensuring users are informed about the system's activity.
+
+- **Neat Code Structure:** The codebase is organized within well-structured folders and modules, ensuring easy comprehension and maintenance.
+
 
 
 
