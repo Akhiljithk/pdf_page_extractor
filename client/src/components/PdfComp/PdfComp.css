@@ -1,0 +1,71 @@
+.pdf-div{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;   
+}
+.pdf-container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;   
+}
+.each_pages{
+    /* max-width: 300px;
+    max-height: 300px; */
+    padding: 0px 12px 23px 12px;
+    padding-top: 5px;
+    margin: 9px;
+    background: rgb(231 207 255);
+    box-shadow: 5px 5px 0px 0px #c48aff;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+.each_pages:hover{
+    box-shadow: 1px 1px 0px 0px #c48aff;
+    transform: scale(0.99);
+    cursor: pointer;
+}
+.pdf-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;     
+}
+canvas{
+    display: block;
+    user-select: none;
+    width: 100% !important;
+    max-width: 227px !important;
+    height: auto !important;
+}
+.select_page_check_box{
+    display: inline;
+}
+.merge_pdf{
+    padding: 10px 20px;
+    border: none;
+    margin: 10px 0;
+    background: #f0428b;
+    color: #ffff;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 3px 4px 0 #850643;
+    transition: 0.3s;
+  }
+  .merge_pdf:hover{
+    box-shadow: 0 0 0 #450685;
+  }
+.merge-btn{
+    background-color: #9842f0;
+    box-shadow: 3px 4px 0 #450685;
+    font-size: medium;
+}
+.download-btn{
+    background-color: #9842f0;
+    box-shadow: 3px 4px 0 #450685;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+}

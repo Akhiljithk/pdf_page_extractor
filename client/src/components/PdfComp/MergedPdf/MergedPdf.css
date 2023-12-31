@@ -1,0 +1,10 @@
+.each_merged_pages{
+    margin: 11px 0px;
+    background: rgb(255, 255, 255);
+    box-shadow: unset;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+.each_merged_pages:hover{
+    box-shadow: unset;
+}
