@@ -2,51 +2,57 @@ const express = require('express');
 const multer = require('multer');
 const { PDFDocument } = require('pdf-lib');
 const fs = require('fs');
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
 app.use(cors({
-  origin: '*',
+  origin: '*', // allowing request from all origin
 }));
+// setting up static folders 
+app.use(express.static(path.join(__dirname + "/public")))
 app.use('/output', express.static('output'));
 app.use('/uploads', express.static('uploads'));
-const upload = multer({ dest: 'uploads/' }); // Folder where files will be stored
-
-app.get('/', (req, res)=>{
-  res.send("Hello World!")
+// Define storage for uploaded PDFs
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Uploads will be stored in the 'uploads' directory
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname); // Use the original filename for the uploaded file
+  }
 });
+const upload = multer({ storage: storage }); // Folder where files will be stored
+
+// merge pdf api
 app.post('/merge-pdf', upload.single('pdfFile'), async (req, res) => {
 
   try {
-    const pdfPath = req.file.path; // Path to the uploaded PDF file
+    const pdfPath = req.file.path; // Path to the uploaded PDF file from client
     const selectedPages = JSON.parse(req.body.selectedPages); // Array of selected page numbers
 
-    const pdfBytes = fs.readFileSync(pdfPath);
-    const pdfDoc = await PDFDocument.load(pdfBytes);
+    const pdfBytes = fs.readFileSync(pdfPath); //  reads the file as a binary data
+    const pdfDoc = await PDFDocument.load(pdfBytes); // ArrayBuffer to pdf
 
-    const mergedPdf = await PDFDocument.create();
+    const mergedPdf = await PDFDocument.create(); // create an empty pdf
+    
+    //copy selected pages to mergePdf variable 
     for (const pageNumber of selectedPages) {
       const [copiedPage] = await mergedPdf.copyPages(pdfDoc, [pageNumber - 1]);
-      mergedPdf.addPage(copiedPage);
+      mergedPdf.addPage(copiedPage);  
     }
-
-    const outputPath = 'output/merged_pdf.pdf'; 
+    // save mergedPdf in this path
+    const outputPath = `output/${req.file.originalname}`; 
     fs.writeFileSync(outputPath, await mergedPdf.save());
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    // sent the url of saved mergedPdf to the client 
     res.json({ mergedPdfUrl: `http://localhost:5000/${outputPath}` });
-    // res.json({ mergedPdfUrl: `http://localhost:5000/uploads/1.pdf` });
   } catch (error) {
-    res.status(500).send('Error merging PDF');
+    res.status(500).send('Error merging PDF: ', error);
   }
 });
 
-app.get('/output/merged_pdf.pdf', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  const outputPath = 'output/merged_pdf.pdf'; 
-  res.json({ mergedPdfUrl: `http://localhost:5000/${outputPath}` });
-});
-
-PORT = 5000
+PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

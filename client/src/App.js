@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="App">
       <PdfDataProvider>
-        <UploadPdf />
+        {/* input field to upload pdf  */}
+        <UploadPdf /> 
+        {/* display uploaded and merged pdf  */}
         <PdfComp />
       </PdfDataProvider>
     </div>
