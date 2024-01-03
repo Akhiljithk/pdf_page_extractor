@@ -14,7 +14,7 @@ This project allows you to upload a PDF and extract specific pages.
    git clone https://github.com/your-username/repository-name.git
 
 ### Client Setup
-1. Open a terminal and navigate to the client folder:
+1. Open a terminal in the same folder where files are downloaded and navigate to the client folder using this command:
    ```bash
    $cd client
 2. Install the required packages:
