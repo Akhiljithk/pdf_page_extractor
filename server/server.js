@@ -41,9 +41,11 @@ app.post('/merge-pdf', upload.single('pdfFile'), async (req, res) => {
       const [copiedPage] = await mergedPdf.copyPages(pdfDoc, [pageNumber - 1]);
       mergedPdf.addPage(copiedPage);  
     }
+    
     // save mergedPdf in this path
     const outputPath = `output/${req.file.originalname}`; 
     fs.writeFileSync(outputPath, await mergedPdf.save());
+    // adding access control header 
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     // sent the url of saved mergedPdf to the client 
     res.json({ mergedPdfUrl: `http://localhost:5000/${outputPath}` });

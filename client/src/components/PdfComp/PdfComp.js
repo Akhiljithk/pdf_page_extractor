@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
-import Checkbox from '@mui/material/Checkbox';
-import MergedPdf from './MergedPdf/MergedPdf';
-import { usePdfData } from '../../PdfDataContext';
-import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined';
-import PorgrassBar from '../ProgressBars/PorgrassBar'
+import Checkbox from '@mui/material/Checkbox'; 
+import MergedPdf from './MergedPdf/MergedPdf'; // component to show merged pdf
+import { usePdfData } from '../../PdfDataContext'; // Importing context for PDF data
+import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined'; // download icon
+import PorgrassBar from '../ProgressBars/PorgrassBar' // progress bar component
 import axios from 'axios';
 import './PdfComp.css';
 
 function PdfComp() {
   const { pdfData } = usePdfData(null); // pdf file data from user input 
   const [numPages, setNumPages] = useState(null); // number of total pages in uploaded pdf  
-  const [selectedPages, setSelectedPages] = useState([]); // all user selected pages
-  const [selectedNumPages, setSelectedNumPages] = useState(null); // total number of user selected pages 
+  const [selectedPages, setSelectedPages] = useState([]); // all pages selected by users 
+  const [selectedNumPages, setSelectedNumPages] = useState(null); // total number of pages selected by users 
   const [checkedPages, setCheckedPages] = useState({}); // controlling true false in checkboxes
   const [mergedPdfUrl, setMergedPdfUrl] = useState(null); // pdf url of merged pages from server 
   const [loading, setLoading] = useState(false); // progress bar status 
