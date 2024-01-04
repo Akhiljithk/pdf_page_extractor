@@ -28,26 +28,23 @@ Open a terminal and follow these commands below:
 3. Start the client-side application:
    ```bash
    npm start
-
-Please wait for some time for server to start
+   
+You can now minimize the terminal. 
 
 ### Server Setup
 
-1. Go back to the "pdf_page_extractor" folder:
-   ```bash
-   cd..
-3. Navigate to the Server folder:
-   ```bash
-   cd server
+1. Open "pdf_page_extractor" folder again and navigate to server folder. Open a terminal there.
+   
 2. Install the necessary packages:
    ```bash
    npm install
 3. tart the server:
    ```bash
    nodemon start
-3. Once both the client and server are running, open your browser and visit :
-   ```bash
-   http://localhost:5000
+4. Once both the client and server are running, open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Now you are ready to go! 
+Upload a pdf file, select pages you want, merge it and you can download it to your local storage.  
 
 ### Note: 
 Ensure both client and server are running simultaneously to utilize the application functionalities effectively.
