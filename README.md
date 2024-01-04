@@ -9,9 +9,11 @@ This project allows you to upload a PDF and extract specific pages.
 
 ### Getting Started
 
+Open a terminal in a folder and follow the commands:
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/Akhiljithk/pdf_page_extractor.git
 
 ### Client Setup
 1. Open a terminal in the same folder where files are downloaded and navigate to the client folder using this command:
