@@ -9,34 +9,42 @@ This project allows you to upload a PDF and extract specific pages.
 
 ### Getting Started
 
-Open a terminal in a folder and follow the commands:
+Open a terminal and follow these commands below:
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Akhiljithk/pdf_page_extractor.git
-
-### Client Setup
-1. Open a terminal in the same folder where files are downloaded and navigate to the client folder using this command:
+2. Navigate to downladed folder "pdf_page_extractor"
    ```bash
-   $cd client
+   cd pdf_page_extractor
+   
+### Client Setup
+1. Navigate to the client folder using this command:
+   ```bash
+   cd client
 2. Install the required packages:
    ```bash
-   $npm install
+   npm install
 3. Start the client-side application:
    ```bash
-   $npm start
+   npm start
+
+Please wait for some time for server to start
 
 ### Server Setup
 
-1. Open a terminal and navigate to the client folder:
+1. Go back to the "pdf_page_extractor" folder:
    ```bash
-   $cd server
+   cd..
+3. Navigate to the Server folder:
+   ```bash
+   cd server
 2. Install the necessary packages:
    ```bash
-   $npm install
+   npm install
 3. tart the server:
    ```bash
-   $nodemon start
+   nodemon start
 3. Once both the client and server are running, open your browser and visit :
    ```bash
    http://localhost:5000
