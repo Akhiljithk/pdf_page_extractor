@@ -29,7 +29,7 @@ Open a terminal and follow these commands below:
    ```bash
    npm start
    
-You can now minimize the terminal. 
+You can now minimize the terminal, but don't close it.  
 
 ### Server Setup
 
