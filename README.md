@@ -2,7 +2,7 @@
 
 This project allows you to upload a PDF and extract specific pages.
 
-![Screenhots](tScreenshots/1.jpg)
+![Screenhots](tScreenshots/2.1.jpg)
 
 ### Project Structure
 
@@ -61,6 +61,13 @@ Ensure both client and server are running simultaneously to utilize the applicat
 
 - **Neat Code Structure:** The codebase is organized within well-structured folders and modules, ensuring easy comprehension and maintenance.
 
-
+# Screenshots
+![Screenhots](tScreenshots/1.jpg)
+![Screenhots](tScreenshots/2.jpg)
+![Screenhots](tScreenshots/2.1.jpg)
+![Screenhots](tScreenshots/3.jpg)
+![Screenhots](tScreenshots/4.jpg)
+![Screenhots](tScreenshots/5.jpg)
+![Screenhots](tScreenshots/6.jpg)
 
 
