@@ -2,6 +2,8 @@
 
 This project allows you to upload a PDF and extract specific pages.
 
+![Screenhots](tScreenshots/1.jpg)
+
 ### Project Structure
 
 - **Client:** The client-side of the application built using React.js.
